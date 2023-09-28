@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 901639f1dddd7b04aa3c943786d274d5
+guid: 886ff5dc8f4dc4280913f178d3811a45
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -63,7 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -129,12 +129,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: penguin_idle_01_0
+      name: penguin_down_04_0
       rect:
         serializedVersion: 2
-        x: 163
-        y: 34
-        width: 178
+        x: 123
+        y: 79
+        width: 240
         height: 253
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -143,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5eb10489325124b69a76622b9b00e627
-      internalID: -889157074
+      spriteID: 49f7b020aee9c4a62ac634a62931342d
+      internalID: 133400374
       vertices: []
       indices: 
       edges: []
@@ -160,7 +160,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      penguin_idle_01_0: -889157074
+      penguin_down_04_0: 133400374
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
