@@ -3,12 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public delegate void GameStartAndPause();
+
 public class GameManager : MonoBehaviour
 {
     //싱글톤 패턴 Instance
     private static GameManager instance;
 
     public bool isGameStart = false;
+
+    //게임 시작 및 정지 이벤트
+    public static event GameStartAndPause GameStartEvent;
+    public static event GameStartAndPause GamePauseEvent;
 
     // TIME 관련 변수
     private const int BASIC_SET_TIME = 15; // 초기 게임 설정시간
@@ -27,13 +33,15 @@ public class GameManager : MonoBehaviour
         //싱글톤 패턴
         if(instance != null)
         {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
+            Destroy(gameObject);
         }
         else
         {           
-            Destroy(gameObject);
+            instance = this;
+            DontDestroyOnLoad(gameObject);
         }
+
+        isGameStart = false;
     }
 
     private void Update()
@@ -74,6 +82,14 @@ public class GameManager : MonoBehaviour
     {
         if (isGameStart && Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log("게임 정지");
+
+            GamePauseEvent();
+
+            //GameObject SpawnClouds = GameObject.Find("CloudSpawners");
+            //SpawnClouds.GetComponent<SpawnCloud>().PauseSpawnCloud();
+            
+
             //TODO 게임정지
             //1) Pause 이미지
             //2) 구름 생성 정지
@@ -92,7 +108,13 @@ public class GameManager : MonoBehaviour
             //2) 구름 생성
             //3) 변수 초기화
 
+            GameStartEvent();
+
+            //GameObject SpawnClouds = GameObject.Find("CloudSpawners");
+            //SpawnClouds.GetComponent<SpawnCloud>().StartSpawnCloud();
+
             remainTime = BASIC_SET_TIME; // 초기 시작시간으로 초기화
+            isGameStart = true;
         }
     }
 
