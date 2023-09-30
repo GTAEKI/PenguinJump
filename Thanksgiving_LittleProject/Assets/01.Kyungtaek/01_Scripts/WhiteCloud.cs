@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WhiteCloud : MonoBehaviour
 {
-    const int SPEED = 5;
+    const int SPEED = 4;
     float screenX;
 
     private void Start()

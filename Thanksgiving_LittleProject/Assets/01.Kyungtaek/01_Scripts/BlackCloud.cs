@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlackCloud : MonoBehaviour
 {
-    const int SPEED = 7;
+    const int SPEED = 6;
     float screenX;
 
     private void Start()

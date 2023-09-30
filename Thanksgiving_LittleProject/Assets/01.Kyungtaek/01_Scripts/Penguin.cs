@@ -68,7 +68,7 @@ public class Penguin : MonoBehaviour
 
     private void resetPosition()
     {
-        transform.position = new Vector2(-2f, -4);
+        transform.position = new Vector2(-1.5f, screenY - 3f);
         isJump = false;        
     }
 }
