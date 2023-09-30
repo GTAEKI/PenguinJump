@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - BlackCloud
+  - WhiteCloud
   layers:
   - Default
   - TransparentFX
@@ -44,4 +46,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 4017160553
+    locked: 0
+  - name: GameOverUI
+    uniqueID: 3392832691
     locked: 0
