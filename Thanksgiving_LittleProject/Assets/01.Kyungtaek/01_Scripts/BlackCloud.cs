@@ -5,10 +5,15 @@ using UnityEngine;
 public class BlackCloud : MonoBehaviour
 {
     const int SPEED = 7;
+    float screenX;
+
+    private void Start()
+    {        
+        screenX = Camera.main.ScreenToWorldPoint(Vector3.zero).x - 10.0f;
+    }
 
     void Update()
     {
-        float screenX = Camera.main.ScreenToWorldPoint(Vector3.zero).x - 10.0f;
 
         if (transform.position.x < screenX)
         {

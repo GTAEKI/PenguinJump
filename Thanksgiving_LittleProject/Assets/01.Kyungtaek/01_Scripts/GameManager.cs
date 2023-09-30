@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
         if (!isGameStart) return; //게임이 시작되지 않았다면 나머지 기능 동작 x
 
         //게임 정지
-        GamePause();
+        //GamePause();
     }
 
 
@@ -63,16 +63,16 @@ public class GameManager : MonoBehaviour
         GameOverEvent();
     }
 
-    //게임 정지
-    private void GamePause()
-    {
-        if (isGameStart && Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log("게임 정지");
-            Time.timeScale = 0.0f;
-            isGameStart = false;
-        }
-    }
+    ////게임 정지
+    //private void GamePause()
+    //{
+    //    if (isGameStart && Input.GetKeyDown(KeyCode.Space))
+    //    {
+    //        Debug.Log("게임 정지");
+    //        Time.timeScale = 0.0f;
+    //        isGameStart = false;
+    //    }
+    //}
 
     //게임 시작
     public void GameStart()

@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Device;
 
 public class Penguin : MonoBehaviour
 {
     Rigidbody2D penguinRB;
     Animator penguinAnimator;
     private bool isJump;
+
+    float screenY;
 
     public AudioClip jumpSound;
     public AudioClip eatBlackCloudSound;
@@ -18,14 +21,17 @@ public class Penguin : MonoBehaviour
         penguinRB = GetComponent<Rigidbody2D>();
         penguinAnimator = GetComponent<Animator>();
         GameManager.GameStartEvent += resetPosition;
+
+        screenY = Camera.main.ScreenToWorldPoint(Vector3.zero).y + 9.0f;
+
     }
 
-    
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) //터치할 경우
         {
-            if (GameManager.instance.isGameStart)
+            if (GameManager.instance.isGameStart && transform.position.y <= screenY)
             {
                 isJump = true;
                 penguinRB.velocity = Vector2.up * 6;
