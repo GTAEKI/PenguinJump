@@ -1,4 +1,4 @@
-# Thanksgiving_LittleProject
+#PenguinJumpJump
 
 ## 👨🏻‍💻 제작 동기
 추석 기간동안 구글 플레이스토어 게임 출시 경험을 목표로 제작하였습니다.
