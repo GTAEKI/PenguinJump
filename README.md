@@ -23,3 +23,5 @@ https://play.google.com/store/apps/details?id=com.TaeTae.PenguinJumpJump&pcampai
 ### 출시 진행상황
 10.1 구글 플레이스토어 검토요청
 10.4 게시 완료
+
+
