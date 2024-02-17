@@ -10,6 +10,9 @@ https://play.google.com/store/apps/details?id=com.TaeTae.PenguinJumpJump&pcampai
 - 흰 구름을 밟을 경우 1점
 - 검은 구름을 밟을 경우 게임종료
 
+## 느낀점
+모바일 대응시 화면 UI대응을 위해 신경을 많이 써야한다는점을 배웠다.
+
 ## 🕰️ 개발 기간
 * 23.09.28(목) - 23.09.30(토)(총 20h)
 
